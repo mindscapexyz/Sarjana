@@ -36,3 +36,14 @@ class FileHandlingService(Service):
                 pdf_item = self.load_json_into_pdf_obj(ModelStore().paths().pdf_dir() / file)
                 list_pdf_obj.append(pdf_item)
         return list_pdf_obj
+    
+    def check_file_exist(self,file:Path)-> bool:
+        if file.exists():
+            return True
+        return False
+
+    def delete_file(self,file:Path) -> None:
+        try:
+            file.unlink()
+        except FileNotFoundError:
+            print("File Does Not Exist")
