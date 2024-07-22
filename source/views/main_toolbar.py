@@ -18,11 +18,18 @@ class MainToolBar(QToolBar):
         spacer_widget = QWidget()
         spacer_widget.setSizePolicy(QSizePolicy.Policy.Expanding, QSizePolicy.Policy.Preferred)
 
+        
+
         add_pdf_button = QToolButton()
         add_pdf_button.setIcon(QIcon(Icon.PLUS.value))
         add_pdf_button.clicked.connect(self.on_add_pdf_button_pressed)
 
+        settings_button = QToolButton()
+        settings_button.setIcon(QIcon(Icon.SETTINGS.value))
+
+        self.addWidget(settings_button)
         self.addWidget(spacer_widget)
+
         self.addWidget(add_pdf_button)
 
     @Slot()

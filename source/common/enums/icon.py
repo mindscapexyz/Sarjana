@@ -43,6 +43,6 @@ class Icon(Enum):
     TRASH = "_resources/dark_theme/trash_dark_theme.svg"
     UPLOAD = "_resources/dark_theme/upload.svg"
     USER = "_resources/dark_theme/114-user.svg"
-
+    SETTINGS="_resources/dark_theme/settings-cog-svgrepo-com.svg"
     LOGIN_BG = "_resources/dark_theme/background-image.png"
     SPLASH_SCREEN_BG = "_resources/dark_theme/splash-screen-bg.svg"
